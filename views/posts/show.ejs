@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Github posts</title>
+</head>
+
+<body>
+  <h3><%= post.title %></h3>
+  <p><a href="/posts/delete/<%= post.title %>">Delete</a></p>
+  <form action="/posts/<%= post.title %>" method="POST">
+
+    <p>
+    <label>Title</label>
+    <input type = "text" id="title" name = "title" value = "<%= post.title %>"/>
+  </p>
+  <p>
+    <label>Author</label>
+    <input type = "text" id="author"  name = "author" value = "<%= post.author %>"/>
+  </p>
+  <p>
+    <label>Category</label>
+    <input type = "text" id="category"  name = "category" value = "<%= post.category %>"/>
+  </p>
+  <p>
+    <label>Image</label>
+    <input type = "text" id="image"  name = "image" value = "<%= post.image %>"/>
+  </p>
+  <p>
+    <label>Date</label>
+    <input type = "date" id="date" name = "date" value = "<%= post.date %>"/>
+  </p>
+  <p>
+    <label>Content</label>
+  	<input type = "text" id="content"  name = "content" value = "<%= post.content %>"/>
+  </p>
+    <button>Update</button>
+
+  </form>
+</body>
+
+</html>
