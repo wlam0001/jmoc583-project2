@@ -1,36 +1,58 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Posts</title>
-	</head>
-	<body>
-	<h1>Create A New Post</h1>
-		<form method = "POST" action = "/posts">
-			<p>
-			<label>Title</label>
-			<input type = "text" id="title" name = "title" value = ""/>
-		</p>
-		<p>
-			<label>Author</label>
-			<input type = "text" id="author"  name = "author" value = ""/>
-		</p>
-		<p>
-			<label>Category</label>
-			<input type = "text" id="category"  name = "category" value = ""/>
-		</p>
-		<p>
-			<label>Image</label>
-			<input type = "text" id="image"  name = "image" value = ""/>
-		</p>
-		<p>
-			<label>Date</label>
-			<input type = "date" id="date" name = "date" value = ""/>
-		</p>
-		<p>
-			<label>Content</label>
-			<input type = "text" id="content"  name = "content" value = ""/>
-		</p>
-		<button>Create Post</button>
+
+<head>
+	<title>Posts</title>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=2">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="content ">
+			<img src="/coco-cafe-logo.jpg" class="img-circle" width="100" height="100">
+			<form method="POST" action="/posts" id="form" class="row">
+				<div class="form-group ">
+					<label class="control-label col-sm-2">Title</label>
+					<input class="col-sm-9" autocapitalize=words autocorrect=off type="text" id="title" name="title" value="" />
+				</div>
+				<div class="form-group ">
+					<label class="control-label col-sm-2">Author</label>
+					<input class="col-sm-9" type="text" id="author" name="author" value="" />
+				</div>
+
+				<div class="form-group ">
+					<label class="control-label col-sm-2">Category</label>
+					<input class="col-sm-9" type="text" id="category" name="category" value="" />
+				</div>
+
+				<div class="form-group ">
+					<label class="control-label col-sm-2">Date</label>
+					<input class="col-sm-9" type="date" id="date" name="date" value="" />
+				</div>
+				<div class="form-group ">
+					<label class="control-label col-sm-2">Image URL</label>
+					<!-- <input class="col-sm-9" type="text" id="image" name="image" value="" /> -->
+					<input  class="control-label col-sm-9" type="file" onchange="loadFile(event)" id="image" name="image" value="" accept="image/*">
+				</div>
+
+				<div class = "image-div">
+					  <img id="picture" />
+				</div>
+
+
+				<div class="form-group ">
+					<label class="control-label col-sm-2">Content</label>
+					<textarea class="col-sm-9" type="text" id="content" name="content" value=""> </textarea>
+				</div>
+				<button class="col-sm-11" type="submit" >Create Post</button>
+		</div>
 		</form>
-	</body>
+	</div>
+	</div>
+</body>
+
 </html>

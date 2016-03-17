@@ -3,17 +3,24 @@
 
 <head>
   <title>Post</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
 </head>
 
 <body>
-  <div class="list-group">
-  <% if (posts.length>0){ %>
-      <% for (var i in posts) { %>
-          <a href = "/posts/<%= posts[i].title %>"><%= posts[i].title %></a>
-        <% } %>
-    <% } %>
-      <p> <a href="posts/new">Create New Post</a></p>
+  <div>
+    <div class="list-group">
+      <% if (posts.length>0){ %>
+        <% for (var i in posts) { %>
+          <a href="/posts/<%= posts[i].title %>" class="list-group-item">
+            <%= posts[i].title %>
+          </a>
+          <% } %>
+            <% } %>
+              <p> <a href="posts/new">Create New Post</a></p>
     </div>
+  </div>
 </body>
 
 </html>

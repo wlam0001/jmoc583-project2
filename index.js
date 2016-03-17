@@ -10,6 +10,8 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+app.use(express.static('public'));
+
 app.set('view engine', 'ejs');
 
 app.get('/posts', post.list);
@@ -22,7 +24,7 @@ app.get('/posts/:id', post.show);
 
 app.get('/posts/delete/:id', post.remove);
 
-db.connect('mongodb://localhost:27017/content', function(){
+db.connect('mongodb://localhost:27017/contents', function(){
   console.log('MongoDB started...');
   app.listen(3000,function(){
     console.log("Express started");

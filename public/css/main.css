@@ -1,0 +1,30 @@
+.content {
+  max-width: 550px;
+  padding-top: 0px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+body{
+  background-color: brown;
+}
+textarea {
+  height: 150px;
+}
+#picture{
+  width: 100%;
+  height: auto;
+}
+.image {
+  border-style: dashed;
+}
+.image-div {
+  margin-left: auto;
+  margin-right: auto;
+}
+input, textarea {
+  width: 100%;
+}
