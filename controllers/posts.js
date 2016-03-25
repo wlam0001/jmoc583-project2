@@ -16,7 +16,14 @@ exports.show = function(req, res) {
         res.render('posts/show', {post: results[0]});
     });
 };
+exports.edit = function(req, res) {
+    var collection = db.get().collection('posts');
 
+    collection.find({"title": req.params.id}).limit(1).toArray(function(err, results) {
+      console.log(results[0]);
+        res.render('posts/edit', {post: results[0]});
+    });
+};
 exports.form = function (req, res){
   res.render('posts/form');
 };

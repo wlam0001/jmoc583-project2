@@ -10,21 +10,31 @@
 
 <body>
   <div>
-    <div class="container">
-      <div class="list well">
+    <div class="container" >
+      <div class="list content well" >
+        <div class="image" id="top">
+          <a href="/posts"><img src="/coco-cafe-logo.jpg" class="img-circle" width ="120" height="120"></a>
+        </div>
+        <h1 align = "center"><b>Posts</b></h1>
+          <p align = "right" style="sans-serif;"> <a href="posts/new"><strong>Create New Post</strong></a></p>
         <div class="list-group">
           <% if (posts.length>0){ %>
             <% for (var i in posts) { %>
               <a href="/posts/<%= posts[i].title %>" class="list-group-item">
-                <%= posts[i].title %>
+              <p style="text-align:left;"> <%= posts[i].title %>
+              <span style="float:right;"> <%= posts[i].date.toDateString().substring(4,15) %></span></p>
               </a>
               <% } %>
                 <% } %>
-                  <p> <a href="posts/new">Create New Post</a></p>
         </div>
       </div>
     </div>
+        <a href="#top"><div class="arrow"></div></a>
   </div>
+  <footer>
+    <p style="color:white;">Created for UNC University Classroom Project (JMOC 583) by Emily Lam</p>
+    <p style="color:white;">Implemented using node.js, mongodb, express, bodyParser, and ejs</p>
+  </footer>
 </body>
 
 </html>

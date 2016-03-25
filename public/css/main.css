@@ -1,6 +1,7 @@
-.container{
+.container {
   display: block;
-  margin-top: 60px;
+  margin-top: 90px;
+  margin-bottom: 90px;
 }
 .content {
   max-width: 760px;
@@ -11,57 +12,101 @@
   padding: 0px;
 }
 .list {
-  max-width: 1200px;
+  max-width: 1300px;
   padding-top: 0px;
-  padding-right: 20px;
+  padding-right: 30px;
   padding-bottom: 0px;
-  padding-left: 20px;
+  padding-left: 30px;
   display: block;
   margin-right: auto;
   margin-left: auto;
   background-color: white;
+  font-family: "Times New Roman", Times, serif;
 }
 body {
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #4C3E31;
 }
-label{
+label {
   font-size: 16px;
 }
 .image {
   margin-left: auto;
   margin-right: auto;
-  width: 120px;
+  width: 130px;
   position: relative;
-  top:-60px;
+  top: -60px;
 }
-.well{
+.well {
   background-color: #f2e6d9;
 }
-.form {
+.form, .info {
   padding-left: 45px;
   padding-right: 45px;
 }
-.date{
+.date {
   text-align: right;
   font-size: 14px;
   margin: 0px;
 }
 .btn:hover {
   color: white;
-  background-color:  #4C3E31;
+  background-color: #4C3E31;
   border-color: #4C3E31;
 }
-.btn-default{
+.btn-default {
   color: white;
   background-color: #6d5946;
-  border-color:#6d5946;
+  border-color: #6d5946;
 }
 .form-control:focus {
-  border-color:#4C3E31;
+  border-color: #4C3E31;
   box-shadow: inset 0 1px 1px rgba(172, 115, 57, 0.075), 0 0 8px rgba(172, 115, 57, 0.6);
 }
 .end {
   margin-bottom: 15px;
   text-align: right;
+}
+.image-1 {
+  padding-right: 15px;
+}
+h1 {
+  line-height: 30px;
+  margin: 15px 0;
+}
+.contents {
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+.sub-info {
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+.tags {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+.list-group-item {
+  line-height: 30px;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.arrow {
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
+  width: 30px;
+  height: 30px;
+  transform: rotate(-135deg);
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+}
+.arrow:hover {
+  border-right: 10px solid #f2e6d9;
+  border-bottom: 10px solid #f2e6d9;
+}
+.arrow:active {
+  position: relative;
+  top: 1px;
 }

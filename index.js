@@ -19,12 +19,14 @@ app.get('/posts', post.list);
 app.get('/posts/new', post.form);
 app.post('/posts', post.create);
 
-app.post('/posts/:id', post.update);
 app.get('/posts/:id', post.show);
+
+app.post('/posts/edit/:id', post.update);
+app.get('/posts/edit/:id', post.edit);
 
 app.get('/posts/delete/:id', post.remove);
 
-db.connect('mongodb://localhost:27017/contents', function(){
+db.connect('mongodb://localhost:27017/finalcontents', function(){
   console.log('MongoDB started...');
   app.listen(3000,function(){
     console.log("Express started");

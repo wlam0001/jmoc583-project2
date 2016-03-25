@@ -2,57 +2,39 @@
 <html>
 
 <head>
-  <title>Github posts</title>
+  <title>Posts</title>
+  <script src="/js/jquery-2.2.1.min.js"></script>
   <script type="text/javascript" src="/js/main.js"></script>
-  <script type="text/javascript" src="/js/jquery-2.2.1.min.js"></script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=3">
+  <meta name="viewport" content="width=device-width, initial-scale=2">
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
 </head>
 
 <body>
   <div class="container">
-		<div class="content well">
-      <img src="/coco-cafe-logo.jpg" class="img-circle" width="100" height="100">
-      <h3><%= post.title %></h3>
-      <a href="/posts/delete/<%= post.title %>">Delete</a>
-      <form action="/posts/<%= post.title %>" role="form" id = "form" method="POST" class = "row">
-				<div class="form-group ">
-					<label class="control-label col-sm-3">Title</label>
-					<input class="col-sm-9" autocapitalize=words autocorrect=off type="text" id="title" name="title" value="<%= post.title %>" />
-				</div>
-
-				<div class="form-group ">
-					<label class="control-label col-sm-3">Author</label>
-					<input class="col-sm-9" type="text" id="author" name="author" value="<%= post.author %>" />
-				</div>
-
-				<div class="form-group ">
-					<label class="control-label col-sm-3">Category</label>
-					<input class="col-sm-9" type="text" id="category" name="category" value="<%= post.category %>" />
-				</div>
-
-				<div class="form-group ">
-          <% var anyString = post.date.toString(); %>
-          <% var temps =  anyString.substring(4,16); %>
-					<label class="control-label col-sm-3">Date</label>
-					<input class="col-sm-9" type="text" id="date" name="date" value="<%= temps %>" />
-				</div>
-
-				<div class="form-group ">
-					<label class="control-label col-sm-3">Image URL</label>
-					<input class="col-sm-9" type="text" id="image" onchange="loadFile(event)" name="image" value="<%= post.image %>" />
-
-				</div>
-				<div class="form-group ">
-					<label class="control-label col-sm-3">Content</label>
-					<textarea class="col-sm-9" type="text" id="content" name="content" value="<%= post.contentS %>"></textarea>
-				</div>
-				<button class="form-group col-sm-11" type="submit">Update</button>
-			</form>
-		</div>
-	</div>
+    <div class="content well">
+      <div class="image">
+        <a href="/posts"><img src="/coco-cafe-logo.jpg" class="img-circle" width ="120" height="120"></a>
+      </div>
+      <div class = "info">
+        <p align = "right" font-size = "12"><a href="/posts">Home </a>| <a href="/posts/edit/<%= post.title %>">Edit</a> | <a href="/posts/delete/<%= post.title %>">Delete</a></p>
+        <h1>
+          <%= post.title %>
+        </h1>
+        <p class= "sub-info"><% if (post.author){%>By <%= post.author %> <% } %> &nbsp; &nbsp; <%= post.date.toString().substring(4,15) %></p>
+        <p class= "tags">Tags: <%= post.category %></p>
+        <% if (post.image ){%>
+        <img src = "<%= post.image %>" height="120px"  align="left" class = "image-1">
+        <% } %>
+        <p class = "contents" style="white-space: pre-wrap"><%= post.content %></p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p style="color:white;">Created for UNC University Classroom Project (JMOC 583) by Emily Lam</p>
+    <p style="color:white;">Implemented using node.js, mongodb, express, bodyParser, and ejs</p>
+  </footer>
 </body>
 
 </html>
