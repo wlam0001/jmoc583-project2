@@ -22,7 +22,7 @@
         <h1>
           <%= post.title %>
         </h1>
-        <p class= "sub-info"><% if (post.author){%>By <%= post.author %> <% } %> &nbsp; &nbsp; <%= post.date.toString().substring(4,15) %></p>
+        <p class= "sub-info"><% if (post.author){%>By <%= post.author %> &nbsp; &nbsp;<% } %> <%= post.date.toString().substring(4,15) %></p>
         <p class= "tags">Tags: <%= post.category %></p>
         <% if (post.image ){%>
         <img src = "<%= post.image %>" height="120px"  align="left" class = "image-1">
