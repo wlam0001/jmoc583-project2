@@ -17,7 +17,7 @@
 			<div class="image">
 				<a href="/posts"><img src="/coco-cafe-logo.jpg" class="img-circle" width="120" height="120"></a>
 			</div>
-			<form method="POST"  class="row form">
+			<form method="POST" action="/posts/edit/<%= post.title %>" class="row form">
         <p align = "right" font-size = "12"><a href="/posts">Home<a> | <a href="/posts/delete/<%= post.title %>">Delete</a></p>
 				<p class="date">
 					<%= post.date.toDateString().substring(4,15) %>
