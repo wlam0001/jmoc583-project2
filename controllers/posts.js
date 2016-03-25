@@ -32,7 +32,7 @@ exports.update = function (req, res){
               author: req.body.author,
               category: req.body.category,
               image: req.body.image,
-              date: req.body.date,
+              date: new Date(),
               content: req.body.content
             }
         }
@@ -48,7 +48,7 @@ exports.create = function (req, res){
     author: req.body.author,
     category: req.body.category,
     image: req.body.image,
-    date: req.body.date,
+    date: new Date(),
     content: req.body.content
   }, function (err, doc) {
         if (err) {
